@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        var firstnumber;
+        var secondnumber;
+        var result;
+        var operations;
+        //function that display value 		
+        function display(val) {
+            form.displayResult.value = form.displayResult.value + val;
+        }
+
+        /*	function calc(){
+    
+                function operationplus() {  
+      
+                operation = "+";  
+                firstnumber = parseInt(document.lcdform.lcds.value);  
+                document.lcdform.lcds.value = "0";  
+                document.lcdform.lcdsu.value = firstnumber + operation;  
+                //alert(firstnumber);    
+                 } 
+    
+            } */
+        function cr() {
+            document.getElementById("result").value = "";
+        } 
+    </script>
+    <!-- for sid="div" tyling -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+            font-size: medium;
+        }
+
+        table{
+            margin: 5% ;  
+            margin-left: 40%;
+            border: 2px solid #000000;
+            padding: 1%;
+            border-radius: 4px;
+            background-color: rgb(170, 162, 162);
+        }
+
+        input[type="button"] 
+         { 
+         background-color:rgb(0, 51, 128); 
+         color: rgb(255, 255, 255); 
+         border: solid black 2px; 
+         width:100%;
+         padding: 20%;
+         border-radius:4px;
+         } 
+
+         input[type="button"]:hover {
+            background-color:rgb(40, 111, 218); 
+            transition-duration: 1s;
+          }
+  
+         input[type="text"] 
+         { 
+         float: left;  
+         text-align: right;  
+         padding-right: 10px;
+         font-size: 27px ;
+         border-radius:4px;
+         height: 45px;
+         color: #058fff;
+         background-color: rgb(250, 250, 250); 
+         border: 2px solid #058fff;
+         outline: none;
+         width:100% ;
+         margin-bottom: 10px;
+         } 
+
+
+
+        .clear {
+            height: 120px;
+        }
+
+        .equal {
+            height: 177px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            table{
+            margin: 30% 7% auto 5%;
+            border: 2px solid #000000;
+            padding: 3px;
+            border-radius: 4px;
+        }
+
+        input[type="text"] 
+         { 
+         float: left;  
+         text-align: right;   
+         border-radius:4px;
+         background-color: rgb(250, 250, 250); 
+         border: 2px solid #058fff;
+         outline: none;
+         width:370px;
+         }
+
+         .clear {
+            height: 110px;
+        }
+
+        .equal {
+            height: 168px;
+        }
+        
+        }
+    </style>
+</head>
+<!-- create table -->
+
+<body>
+    <div class="body">
+    <table>
+        <form name="form">
+                <tr>
+                    <td colspan="4"><input type="text" name="displayResult" id="result" /></td>
+
+                </tr>
+                <tr>
+                    <td><input type="button" name="one" value="1" onclick="display(one.value)" /> </td>
+                    <td><input name="two" type="button" value="2" onclick="display(two.value)" /> </td>
+                    <td><input name="three" type="button" value="3" onclick="display(three.value)" /> </td>
+                    <td rowspan="2"><input id="clr" class="clear" type="button" value="C" onclick="cr()" /> </td>
+                </tr>
+                <tr>
+                    <td><input name="four" type="button" value="4" onclick="display(four.value)" /> </td>
+                    <td><input name="five" type="button" value="5" onclick="display(five.value)" /> </td>
+                    <td><input name="six" type="button" value="6" onclick="display(six.value)" /> </td>
+                </tr>
+                <tr>
+                    <td><input name="seven" type="button" value="7" onclick="display(seven.value)" /> </td>
+                    <td><input name="eigth" type="button" value="8" onclick="display(eigth.value)" /> </td>
+                    <td><input name="nine" type="button" value="9" onclick="display(nine.value)" /> </td>
+                    <td rowspan="3"><input name="equal" type="button" class="equal" value="="
+                            onClick="displayResult.value=eval(displayResult.value)"> </td>
+                </tr>
+                <tr>
+                    <td><input name="dot" type="button" value="." onclick="display(dot.value)" /> </td>
+                    <td><input name="zero" type="button" value="0" onclick="display(zero.value)" /> </td>
+                    <td><input name="div" type="button" value="/" onclick="display(div.value)" /> </td>
+                </tr>
+                <tr>
+                    <td><input name="add" type="button" value="+" onclick="display(add.value)" /> </td>
+                    <td><input name="sub" type="button" value="-" onclick="display(sub.value)" /></td>
+                    <td><input name="mult" type="button" value="*" onclick="display(mult.value)" /> </td>
+                </tr>
+        </form>
+    </table>
+</div>
+</body>
+
+</html>
